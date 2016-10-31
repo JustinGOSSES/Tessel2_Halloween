@@ -31,7 +31,7 @@
 ---- this is a work in progress, I'll upate more later -------
 
 
-Inline-style: 
+early photo:
 ![alt text](https://github.com/JustinGOSSES/Tessel2_Halloween/blob/master/images/IMG_1079.JPG "early photo of set-up")
 
 
