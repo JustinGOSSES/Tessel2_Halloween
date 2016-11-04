@@ -35,7 +35,7 @@
 <a id="tessel2_halloween" class="anchor" href="#tessel2_halloween" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tessel2_Halloween</h1>
 
 <h4>
-<a id="playground-for-creating-a-tessel2motion-sensorspeakerweb-server-halloween-project-inside-a-plastic-pumpkin" class="anchor" href="#playground-for-creating-a-tessel2motion-sensorspeakerweb-server-halloween-project-inside-a-plastic-pumpkin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Playground for creating a Tessel2+motion sensor+speaker+web server halloween project inside a plastic pumpkin</h4>
+<a id="playground-for-creating-a-tessel2speakerweb-server-halloween-project-inside-a-plastic-pumpkin" class="anchor" href="#playground-for-creating-a-tessel2speakerweb-server-halloween-project-inside-a-plastic-pumpkin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Playground for creating a Tessel2+speaker+web server halloween project inside a plastic pumpkin</h4>
 
 <h4>
 <a id="experiments-folders-holds-trials-and-working-parts" class="anchor" href="#experiments-folders-holds-trials-and-working-parts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Experiments folders holds trials and working parts</h4>
@@ -47,35 +47,78 @@
 <a id="equipment" class="anchor" href="#equipment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Equipment</h2>
 
 <ul>
-<li>Tessel 2</li>
-<li>UE mini-boom blue-tooth (used audio jack instead of bluetooth) speakers</li>
-<li>USB to Audio jack adapter</li>
-<li>Audio jack plug male to plug male cord</li>
+<li><a href="https://tessel.io">Tessel 2</a></li>
+<li>
+<p><a href="http://www.ultimateears.com/miniboom-guide/en-us/">UE mini-boom blue-tooth</a> speakers</p>
+
+<ul>
+<li>I used audio jack instead of bluetooth connection.<br>
+</li>
+<li>One problem with these speakers is when connected only via audio jack and not bluetooth, the speaker would turn off if not used for 10 minutes or so. This is problematic in a way "wait for someone to trigger it" situation. </li>
+<li>In the future, I'd either connect via bluetooth or use a speaker that didn't have this feature. </li>
+</ul>
+</li>
+<li>
+<a href="https://www.amazon.com/gp/product/B002FI7GWK/ref=pd_sim_147_8?ie=UTF8&amp;psc=1&amp;refRID=CC20JZ2K25RKXNEVD5T2">USB to Audio jack adapter</a>
+
+<ul>
+<li>Daffodil US01 USB Sound Card 7.1 Channel / Plug and Play / Microphone (Mic) In and 3.5mm Speaker Out</li>
+</ul>
+</li>
+<li>
+<a href="https://www.amazon.com/Conwork-2-Pack-Auxiliary-Retractable-Extension/dp/B011O8WOYQ/ref=sr_1_1?ie=UTF8&amp;qid=1478232465&amp;sr=8-1&amp;keywords=male+to+male+audio+cable+retractable">male to male plug and retractable extension cord</a> </li>
 <li>USB battery pack</li>
 <li>orange plastic pumpkin</li>
+<li>Cardboard to put above speaker and tessel2 in pumpkin, so you can fill the top half with candy.</li>
 </ul>
 
 <h2>
 <a id="equipment-i-might-use-on-this-project-in-the-future" class="anchor" href="#equipment-i-might-use-on-this-project-in-the-future" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Equipment I might use on this project in the future</h2>
 
 <ul>
-<li>Creative Live web cam</li>
-<li>iRig Cast microphone</li>
-<li>PIR motion sensor</li>
+<li>Creative Live web cam
+
+<ul>
+<li>enable view of person approaching the pumpkin without having to look through window. </li>
+</ul>
+</li>
+<li>iRig Cast microphone
+
+<ul>
+<li>at time of writing the tessel-av library (that worked well for other audio visual tasks) didn't include finished audio-in code, but it was in progress. </li>
+</ul>
+</li>
+<li>PIR motion sensor
+
+<ul>
+<li>originally did buy this, but broke it. Ideally, the pumpkin speech could be triggered by motion sensor or web application.</li>
+</ul>
+</li>
 </ul>
 
 <h2>
 <a id="capabilities-and-basic-set-up" class="anchor" href="#capabilities-and-basic-set-up" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Capabilities and Basic Set-Up:</h2>
 
+<h3>
+<a id="summary" class="anchor" href="#summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary:</h3>
+
+<h4>
+<a id="enables-a-user-to-press-buttons-on-a-web-application-that-trigger-different-halloween-themed-mp3-sounds-or-a-message-read-via-text-to-speech-capabilities-the-are-emitted-from-inside-a-pumpkin-given-these-can-be-triggered-from-a-distance-you-can-have-your-pumpkin-talk-and-interact-with-trick-or-treaters-without-you-being-physically-present" class="anchor" href="#enables-a-user-to-press-buttons-on-a-web-application-that-trigger-different-halloween-themed-mp3-sounds-or-a-message-read-via-text-to-speech-capabilities-the-are-emitted-from-inside-a-pumpkin-given-these-can-be-triggered-from-a-distance-you-can-have-your-pumpkin-talk-and-interact-with-trick-or-treaters-without-you-being-physically-present" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Enables a user to press buttons on a web application that trigger different halloween-themed mp3 sounds or a message read via text-to-speech capabilities the are emitted from inside a pumpkin. Given these can be triggered from a distance, you can have your pumpkin talk and interact with trick-or-treaters without you being physically present.</h4>
+
 <ul>
-<li>Uses a web application served on the tessel's access waypoint to control sounds</li>
-<li>I used an old phone to control the web application and either home wifi or phone hotspot to create the wifi for the tessel</li>
+<li>Uses a web application served on the tessel's access waypoint to control sounds
+
+<ul>
+<li>I used an old phone to control the web application and either home wifi or phone hotspot to create the wifi for the tessel2.</li>
+</ul>
+</li>
 <li>Plays three halloween-themed short noises in mp3 format
 
 <ul>
 <li>witches laughing</li>
 <li>booming ghost saying booo!</li>
 <li>chomping noises</li>
+<li>Several other sounds are in the folder but not in the code.</li>
 </ul>
 </li>
 <li>Uses text to speech capabilities of tessel-av library to say: 
@@ -86,10 +129,38 @@
 </li>
 </ul>
 
+<h3>
+<a id="installation-for-the-working-prototype-folder-speaking-pumpkin" class="anchor" href="#installation-for-the-working-prototype-folder-speaking-pumpkin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation (for the working prototype folder: speaking pumpkin):</h3>
+
+<ol>
+<li>Get your tessel up and running and <a href="http://tessel.github.io/t2-start/">try out basic projects</a>. </li>
+<li>clone this repo onto your local machine</li>
+<li>cd into the repo and then cd into speaking_pumpkin</li>
+<li>run npm start. This should install tessel-av node package, which handles the audio-visual.</li>
+<li>t2 run pumpkin.js or t2 push pumpkin.js</li>
+<li>your terminal should give you the local address and port on which the html page is running. Turn your computer or phone wifi to the tessel2's local wifi access point name. Go to that address given to you by the terminal. You should see the index.html page rendered in your browser. Press one of the buttons. A LED should change on the tessel and the speaker should make the noise. </li>
+</ol>
+
+<h3>
+<a id="problems-to-avoid" class="anchor" href="#problems-to-avoid" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problems to avoid:</h3>
+
+<ul>
+<li>The code is currently set up to trigger LEDs on the tessel2, which then triggers the sounds. The benefit of this is it provides a way to make sure the triggering code is good if you have to debug speakers as well! Bad side affect is you are  limited to the same number of options as LEDs. For any options above 4, like option 9 for example, the sound will run but only once. It will run again if you refresh the page. The code can be fixed to get arond this, but this was last minute before halloween... so what worked immediately was better than clean code that cost 1 hour more. </li>
+</ul>
+
+<h1>
+<a id="tests-in-production" class="anchor" href="#tests-in-production" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests in Production!</h1>
+
+<p><em>PARTY</em> - This worked okay but wasn't great in a loud party setting as it was hard to encourage people to get candy from the pumpkin and trigger the sounds via a web application at the same time.</p>
+
+<p><em>Used to give candy to trick-or-treaters.</em> - Sounds triggered from inside the house using the web application. The person triggering the sounds wasn't in view of anyone outside. This worked pretty well. Although only a few people got scared / surprised, most found it entertaining and several small children engaged the pumpkin in conversation. </p>
+
 <p>---- this is a work in progress, I'll upate more later -------</p>
 
 <p>early photo:
 <img src="https://github.com/JustinGOSSES/Tessel2_Halloween/blob/master/images/IMG_1079.JPG" alt="alt text" title="early photo of set-up"></p>
+
+<p><a href="http://justingosses.github.io/Tessel2_Halloween/">http://justingosses.github.io/Tessel2_Halloween/</a></p>
       </section>
     </div>
 
