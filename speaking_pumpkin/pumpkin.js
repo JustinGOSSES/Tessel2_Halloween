@@ -110,6 +110,7 @@
     //// test index to make sure it is what number I think it should be
     //console.log("index constant = ",index)
 
+    /// plays the sound object on repeat if LED is 4
     if (index==4){
       console.log("index inside if 2 = ",index)
       sound.play();
@@ -118,6 +119,7 @@
         sound.play();
       });
     }
+    /// stops all speaker objects
     if (index==3){
       console.log("index inside if 3 = ",index)
       sound.stop()
@@ -126,7 +128,7 @@
       speaker.stop()
       // sound_1.stop()
     }
-
+    /// plays the sound object on repeat if LED is 0
     if (index==0){
       console.log("index inside if 3 = ",index)
       sound_0.play();
@@ -135,10 +137,12 @@
         sound_0.play();
       });
     }
-
+    /// plays a text-to-speach sound object if LED is 1
     if (index==1){
       console.log("index inside if 1 = ",index)
+      /// this included so the phrases are only said once
       speaker.stop()
+      /// phrases are broken up into pieces, so more natural sounding breaks occur in the speech.
       speaker.say(`
         Hello
       `);
@@ -155,8 +159,7 @@
         I have kitkats and peanut butter cups
       `);
     }
-
-
+    /// plays the sound object on repeat if LED is 2
     if (index==2){
       console.log("index inside if 9 = ",index)
       sound_9.play();
