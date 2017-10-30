@@ -1,4 +1,7 @@
 # Tessel2_Halloween
+
+### Justin Gosses, 2016 
+
 #### Playground for creating a Tessel2+speaker+web server halloween project inside a plastic pumpkin
 
 #### Experiments folders holds trials and working parts
