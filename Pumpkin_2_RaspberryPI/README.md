@@ -17,7 +17,7 @@ Previous talking pumpkin was controlled via a web application. This one is done 
 #### How to remote into your Raspberry Pi:
 	- Generic instructions - https://www.raspberrypi.org/documentation/remote-access/ssh/
 	- What is the default password - https://www.raspberrypi.org/documentation/linux/usage/users.md
-	- ssh pi@192.168.1.69
+	- ssh pi@<insert-ip-of-pi>
 
 ## Instructions You Likely Haven't Done
 
